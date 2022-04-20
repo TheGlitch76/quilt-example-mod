@@ -4,20 +4,16 @@
 		"group": "${maven_group}",
 		"id": "examplemod",
 		"version": "${version}",
-
-		"name": "Example Mod",
-		"description": "An awesome template",
-		"authors": [ "You" ],
-		"contact": {
-			"sources": "https://gihub.com/ENDERZOMBI102/quilt-example-mod",
-			"issues": "https://gihub.com/ENDERZOMBI102/quilt-example-mod/issues"
+		"metadata": {
+			"name": "Mod Name",
+			"description": "A short description of your mod.",
+			"contributors": {
+				"Me!": "Owner"
+			},
+			"license": "ARR",
+			"icon": "assets/examplemod/icon.png"
 		},
-
-		"license": "CC0",
-		"icon": "assets/examplemod/icon.png",
 		"intermediate_mappings": "net.fabricmc:intermediary",
-
-		"environment": "*",
 		"entrypoints": {
 			"init": [
 				"com.examplemod.ExampleMod"
@@ -26,23 +22,22 @@
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"version": "${loader_version}"
+				"versions": ">=${loader_version}"
 			},
 			{
-				"id": "quilt_base",
-				"version": "*"
+				"id": "quilted_fabric_api",
+				"versions": "${quilted_fabric_api_version}"
 			},
 			{
 				"id": "minecraft",
-				"version": ">=${minecraft_version}"
-			},
-			{
-				"id": "java",
-				"version": ">=17"
+				"versions": ">=${minecraft_version}"
 			}
 		]
 	},
 	"mixin": [
 		"examplemod.mixins.json"
-	]
+	],
+	"minecraft": {
+		"environment": "*"
+	}
 }
