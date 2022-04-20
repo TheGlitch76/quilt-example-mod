@@ -36,6 +36,7 @@ processResources {
 			'maven_group': maven_group,
 			'loader_version': loader_version,
 			'minecraft_version': minecraft_version,
+			'quilted_fabric_api_version': quilted_fapi_version
 		])
 	}
 }
